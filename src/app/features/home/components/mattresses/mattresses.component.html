@@ -1,0 +1,25 @@
+
+
+<section class="mattresses">
+  <div class="container">
+    <h2>Матрасы</h2>
+
+    <div class="filters">
+      <button (click)="filter('all')">Все</button>
+      <button (click)="filter('cheap')">Сначала дешевые</button>
+      <button (click)="filter('expensive')">Сначала дорогие</button>
+      <button (click)="filter('newest')">Сначала новые</button>
+    </div>
+
+    <div class="mattress-grid">
+      <div class="mattress-card" *ngFor="let mattress of filteredMattresses">
+        <img [src]="mattress.image" [alt]="mattress.name">
+        <h3>{{ mattress.name }}</h3>
+      </div>
+    </div>
+
+<!--    <div class="more">-->
+<!--      <button routerLink="/all-mattresses">Показать все</button>-->
+<!--    </div>-->
+  </div>
+</section>

@@ -1,0 +1,16 @@
+$primary-color: #0d0d0d;
+$secondary-color: #ffffff;
+$accent-color: #c9a86a;
+
+body {
+  margin: 0;
+  font-family: 'Montserrat', sans-serif;
+  background-color: $secondary-color;
+  color: $primary-color;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+}

@@ -77,7 +77,7 @@
 body {
   background-color: var(--background-color);
   color: var(--text-color);
-  font-family: 'Roboto', sans-serif;
+  font-family: 'Montserrat', sans-serif;
   margin: 0;
 }
 
@@ -146,4 +146,10 @@ body {
   margin-top: 10px;
   font-size: 14px;
   color: var(--spinner-text-color);
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
 }

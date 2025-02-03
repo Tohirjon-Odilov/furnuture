@@ -1,1 +1,62 @@
-<p>header works!</p>
+<header class="header">
+  <div class="container">
+    <div class="logo">
+        <img src="assets/logo.svg" alt="">
+        <h3>
+          Magneto
+        </h3>
+    </div>
+    <nav class="nav">
+      <div class="menu-toggle" (click)="toggleMenu()">
+        <i class="fa fa-bars"></i>
+      </div>
+
+      <ul [ngClass]="{'active': isMenuOpen}">
+        <li><a routerLink="/" routerLinkActive="active">Главная</a></li>
+        <li><a routerLink="/" routerLinkActive="active">О нас</a></li>
+        <li><a routerLink="/" routerLinkActive="active">Партнеры</a></li>
+        <li><a routerLink="/" routerLinkActive="active">Отзывы</a></li>
+        <li><a routerLink="/mattresses" routerLinkActive="active">Матрасы</a></li>
+        <li><a routerLink="/contacts" routerLinkActive="active">Контакты</a></li>
+      </ul>
+      <div class="lang-select">
+        <select>
+          <option class="options" value="ru">Русский</option>
+          <option class="options" value="en">English</option>
+          <option class="options" value="uz">O‘zbek</option>
+        </select>
+        <i class="fa-solid fa-circle-chevron-down"></i>
+      </div>
+
+    </nav>
+  </div>
+</header>
+<!--<header class="header">-->
+<!--  <div class="container">-->
+<!--    <div class="logo">-->
+<!--      <img src="assets/logo.svg" alt="">-->
+<!--      <h3>Magneto</h3>-->
+<!--    </div>-->
+<!--    <nav class="nav">-->
+<!--      <div class="menu-toggle" (click)="toggleMenu()">-->
+<!--        <i class="fa fa-bars"></i>-->
+<!--      </div>-->
+<!--      <ul [ngClass]="{'active': isMenuOpen}">-->
+<!--        <li><a routerLink="/" routerLinkActive="active">Главная</a></li>-->
+<!--        <li><a routerLink="/" routerLinkActive="active">О нас</a></li>-->
+<!--        <li><a routerLink="/" routerLinkActive="active">Партнеры</a></li>-->
+<!--        <li><a routerLink="/" routerLinkActive="active">Отзывы</a></li>-->
+<!--        <li><a routerLink="/mattresses" routerLinkActive="active">Матрасы</a></li>-->
+<!--        <li><a routerLink="/contacts" routerLinkActive="active">Контакты</a></li>-->
+<!--      </ul>-->
+<!--      <div class="lang-select">-->
+<!--        <select>-->
+<!--          <option class="options" value="ru">Русский</option>-->
+<!--          <option class="options" value="en">English</option>-->
+<!--          <option class="options" value="uz">O‘zbek</option>-->
+<!--        </select>-->
+<!--        <i class="fa-solid fa-circle-chevron-down"></i>-->
+<!--      </div>-->
+<!--    </nav>-->
+<!--  </div>-->
+<!--</header>-->

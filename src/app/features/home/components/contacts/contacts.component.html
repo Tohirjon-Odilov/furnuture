@@ -1,0 +1,93 @@
+<section class="contacts">
+  <div class="container">
+    <h2>Контакты</h2>
+
+    <div class="contacts-wrapper">
+      <!-- Chap tomonda forma -->
+      <div class="contact-form">
+        <form>
+          <div class="input-group">
+            <div class="input-wrapper">
+              <label for="name">Имя</label>
+              <input type="text" id="name" required>
+            </div>
+
+            <div class="input-wrapper">
+              <label for="email">Email</label>
+              <input type="email" id="email" required>
+            </div>
+          </div>
+
+          <div class="input-wrapper">
+            <label for="subject">Мавзу</label>
+            <input type="text" id="subject" required>
+          </div>
+
+          <div class="input-wrapper">
+            <label for="message">Ваше сообщение</label>
+            <textarea id="message" rows="5" required></textarea>
+          </div>
+
+          <button type="submit" (click)="sendMessage()">Отправить</button>
+        </form>
+
+      </div>
+
+      <!-- O'ng tomonda kontakt ma'lumotlari -->
+      <div class="contact-info">
+        <h3>Контактная Информация</h3>
+        <div class="info">
+          <h4>
+            Юридический адрес
+          </h4>
+          <p>
+            Toshkent viloyati, Toshkent tumani, Keles shahri, Sadaf ko’chasi 1-uy
+          </p>
+        </div>
+
+        <br>
+        <br>
+
+        <div class="phone">
+          <div>
+            <h5>
+              Телефон
+            </h5>
+            <p>+998 99 778 11 11</p>
+          </div>
+          <div>
+            <h5>
+              Социальные сети
+            </h5>
+            <div class="social-icons">
+              <img src="assets/icons/Youtube.svg" alt="">
+              <img src="assets/icons/Telegram.svg" alt="">
+              <img src="assets/icons/Facebook.svg" alt="">
+              <img src="assets/icons/Instagram.svg" alt="">
+            </div>
+          </div>
+        </div>
+
+        <div class="line"></div>
+
+        <div class="time">
+          <h4>Рабочее время</h4>
+          <p>Понедельник - Пятница: 9:00 - 18:00</p>
+          <p>Суббота - Воскресенье: Выходной</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+  <div class="container">
+    <div class="address-card">
+      <h2>Наш адрес</h2>
+      <div class="container1">
+        <ya-map [center]="[41.319133, 69.295715]" [zoom]="17">
+          <ya-placemark [geometry]="[41.319133, 69.295715]"></ya-placemark>
+        </ya-map>
+      </div>
+    </div>
+  </div>
+</section>
