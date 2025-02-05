@@ -15,11 +15,15 @@ import { ErrorPagesModule } from './features/error-pages/error-pages.module';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import {AngularYandexMapsModule, YaConfig} from "angular8-yandex-maps";
 
+import {register} from 'swiper/element/bundle'
+
+register();
 
 // Tarjima loader'ini yaratish funksiyasi
 export function HttpLoaderFactory(http: HttpClient) {
   return new TranslateHttpLoader(http, './assets/i18n/', '.json');
 }
+
 
 const config: YaConfig = {
   apikey: '9320150c-7536-41cf-8be8-cf42f9bf45d6',

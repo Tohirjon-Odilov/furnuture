@@ -1,11 +1,42 @@
-import { Component } from '@angular/core';
+import {AfterViewInit, Component, OnInit} from '@angular/core';
+import {ScrollService} from "../../services/scroll.service";
+
 
 @Component({
   selector: 'app-home',
   templateUrl: './home.component.html',
   styleUrl: './home.component.scss'
 })
-export class HomeComponent {
+export class HomeComponent implements OnInit, AfterViewInit {
+  constructor(private scrollService: ScrollService) {}
+  array = [1, 2, 3, 4];
+  effect = 'scrollx';
+
+  ngOnInit() {
+    // ScrollService orqali kelgan signalni kuzatish
+    this.scrollService.scrollToSection$.subscribe(sectionId => {
+      if (sectionId) {
+        this.scrollToSection(sectionId);
+      }
+    });
+  }
+
+  ngAfterViewInit() {
+    // Home sahifasi to'liq yuklangach, scroll qilish
+    // (Agar scroll signal oldindan yuborilgan bo'lsa)
+    this.scrollService.scrollToSection$.subscribe(sectionId => {
+      if (sectionId) {
+        this.scrollToSection(sectionId);
+      }
+    });
+  }
+
+  scrollToSection(sectionId: string) {
+    const element = document.getElementById(sectionId);
+    if (element) {
+      element.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    }
+  }
 
   mattresses: any[] = [
     { id: 1, name: 'Матрас Комфорт', image: 'assets/mattresses/matras1.svg' },

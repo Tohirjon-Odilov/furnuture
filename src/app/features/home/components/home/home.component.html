@@ -1,4 +1,4 @@
-<section class="hero">
+<section class="hero" >
   <div class="container">
     <h1>Лучший сон начинается с <br><span>Magneto Matras</span></h1>
     <p>Наши матрасы обеспечивают идеальную поддержку позвоночника, <br> помогают расслабиться и восстановить силы после долгого дня</p>
@@ -11,7 +11,7 @@
   </div>
 </section>
 
-<section class="about-us">
+<section class="about-us" id="about">
   <div class="container">
       <h2>О нас</h2>
       <p class="about-us-info">
@@ -28,7 +28,7 @@
     <div class="container1">
       <div class="top-cards">
         <div class="right-card">
-          <div>
+          <div class="right-card-image">
             <img src="assets/about/kathyryn-tripp-6abl43xbcx8-unsplash.svg" alt="">
           </div>
           <div>
@@ -56,7 +56,7 @@
 
       <div class="left-cards">
         <div class="right-cards">
-          <div class="card">
+          <div class="card card2">
             <img src="assets/about/Frame.svg" alt="vector image">
             <h3>
               Гарантия на продукцию
@@ -104,19 +104,16 @@
   </div>
 </section>
 
-<section class="reviews">
+<section class="reviews" id="reviews">
   <div class="container">
     <h2>Отзывы</h2>
 
     <div class="reviews-grid">
       <div class="review-card" *ngFor="let review of reviews">
-        <!-- Sharh matni -->
         <div class="review-text">
           <p>{{ review.text }}</p>
           <div class="triangle"></div>
         </div>
-
-        <!-- Mijoz rasmi va ismi -->
         <div class="customer-info">
           <img [src]="review.image" [alt]="review.customerName">
           <h3>{{ review.customerName }}</h3>
@@ -124,10 +121,33 @@
       </div>
     </div>
   </div>
+
 </section>
 
+<!--<section class="reviews" id="reviews">-->
+<!--  <div class="container">-->
+<!--    <h2>Отзывы</h2>-->
 
-<section class="partners">
+<!--&lt;!&ndash;    <nz-carousel [nzAutoplay]="true" [nzDotPosition]="'bottom'" [nzEffect]="'scrollx'">&ndash;&gt;-->
+<!--&lt;!&ndash;      <div *ngFor="let review of reviews" nz-carousel-content>&ndash;&gt;-->
+<!--&lt;!&ndash;        <div class="review-card">&ndash;&gt;-->
+<!--&lt;!&ndash;          <div class="review-text">&ndash;&gt;-->
+<!--&lt;!&ndash;            <p>{{ review.text }}</p>&ndash;&gt;-->
+<!--&lt;!&ndash;            <div class="triangle"></div>&ndash;&gt;-->
+<!--&lt;!&ndash;          </div>&ndash;&gt;-->
+<!--&lt;!&ndash;          <div class="customer-info">&ndash;&gt;-->
+<!--&lt;!&ndash;            <img [src]="review.image" [alt]="review.customerName">&ndash;&gt;-->
+<!--&lt;!&ndash;            <h3>{{ review.customerName }}</h3>&ndash;&gt;-->
+<!--&lt;!&ndash;          </div>&ndash;&gt;-->
+<!--&lt;!&ndash;        </div>&ndash;&gt;-->
+<!--&lt;!&ndash;      </div>&ndash;&gt;-->
+<!--&lt;!&ndash;    </nz-carousel>&ndash;&gt;-->
+
+<!--  </div>-->
+<!--</section>-->
+
+
+<section class="partners" id="partners">
   <div class="container">
     <h2>Партнеры</h2>
 

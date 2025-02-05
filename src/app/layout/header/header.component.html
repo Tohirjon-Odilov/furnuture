@@ -1,51 +1,23 @@
-<header class="header">
-  <div class="container">
-    <div class="logo" routerLink="/" routerLinkActive="active">
-        <img src="assets/logo.svg" alt="">
-        <h3>
-          Magneto
-        </h3>
-    </div>
-    <nav class="nav">
-      <div class="menu-toggle" (click)="toggleMenu()">
-        <i class="fa fa-bars"></i>
-      </div>
-
-      <ul [ngClass]="{'active': isMenuOpen}">
-        <li><a routerLink="/" routerLinkActive="active">Главная</a></li>
-        <li><a routerLink="/" routerLinkActive="active">О нас</a></li>
-        <li><a routerLink="/" routerLinkActive="active">Партнеры</a></li>
-        <li><a routerLink="/" routerLinkActive="active">Отзывы</a></li>
-        <li><a routerLink="/mattresses" routerLinkActive="active">Матрасы</a></li>
-        <li><a routerLink="/contacts" routerLinkActive="active">Контакты</a></li>
-      </ul>
-      <div class="lang-select">
-        <select>
-          <option class="options" value="ru">Русский</option>
-          <option class="options" value="en">English</option>
-          <option class="options" value="uz">O‘zbek</option>
-        </select>
-        <i class="fa-solid fa-circle-chevron-down"></i>
-      </div>
-
-    </nav>
-  </div>
-</header>
 <!--<header class="header">-->
 <!--  <div class="container">-->
-<!--    <div class="logo">-->
-<!--      <img src="assets/logo.svg" alt="">-->
-<!--      <h3>Magneto</h3>-->
+<!--    <div class="logo" routerLink="/" routerLinkActive="active">-->
+<!--        <img src="assets/logo.svg" alt="">-->
+<!--        <h3>-->
+<!--          Magneto-->
+<!--        </h3>-->
 <!--    </div>-->
-<!--    <nav class="nav">-->
-<!--      <div class="menu-toggle" (click)="toggleMenu()">-->
-<!--        <i class="fa fa-bars"></i>-->
-<!--      </div>-->
-<!--      <ul [ngClass]="{'active': isMenuOpen}">-->
+<!--          <button class="menu-toggle" (click)="toggleMenu()">-->
+<!--            <span [class.active]="isMenuOpen"></span>-->
+<!--            <span [class.active]="isMenuOpen"></span>-->
+<!--            <span [class.active]="isMenuOpen"></span>-->
+<!--          </button>-->
+<!--    <nav class="nav"  [class.open]="isMenuOpen">-->
+<!--          &lt;!&ndash; Toggle Button &ndash;&gt;-->
+<!--      <ul>-->
 <!--        <li><a routerLink="/" routerLinkActive="active">Главная</a></li>-->
-<!--        <li><a routerLink="/" routerLinkActive="active">О нас</a></li>-->
-<!--        <li><a routerLink="/" routerLinkActive="active">Партнеры</a></li>-->
-<!--        <li><a routerLink="/" routerLinkActive="active">Отзывы</a></li>-->
+<!--        <li><a (click)="navigateTo('about')">О нас</a></li>-->
+<!--        <li><a (click)="navigateTo('reviews')">Отзывы</a></li>-->
+<!--        <li><a (click)="navigateTo('partners')">Партнеры</a></li>-->
 <!--        <li><a routerLink="/mattresses" routerLinkActive="active">Матрасы</a></li>-->
 <!--        <li><a routerLink="/contacts" routerLinkActive="active">Контакты</a></li>-->
 <!--      </ul>-->
@@ -57,6 +29,46 @@
 <!--        </select>-->
 <!--        <i class="fa-solid fa-circle-chevron-down"></i>-->
 <!--      </div>-->
+
 <!--    </nav>-->
 <!--  </div>-->
 <!--</header>-->
+
+<header class="header">
+  <div class="container">
+    <div class="logo" routerLink="/" routerLinkActive="active">
+      <img src="assets/logo.svg" alt="Logo">
+      <h3>Magneto</h3>
+    </div>
+
+    <!-- Burger Menu Toggle -->
+    <button class="menu-toggle" (click)="toggleMenu()">
+      <span [class.active]="isMenuOpen"></span>
+      <span [class.active]="isMenuOpen"></span>
+      <span [class.active]="isMenuOpen"></span>
+    </button>
+
+    <nav class="nav" [class.open]="isMenuOpen">
+      <ul>
+        <li><a routerLink="/" routerLinkActive="active">Главная</a></li>
+        <li><a (click)="navigateTo('about')">О нас</a></li>
+        <li><a (click)="navigateTo('reviews')">Отзывы</a></li>
+        <li><a (click)="navigateTo('partners')">Партнеры</a></li>
+        <li><a routerLink="/mattresses" routerLinkActive="active">Матрасы</a></li>
+        <li><a routerLink="/contacts" routerLinkActive="active">Контакты</a></li>
+      </ul>
+
+      <div class="lang-select">
+        <div>
+          <select>
+            <option value="ru">Русский</option>
+            <option value="en">English</option>
+            <option value="uz">O‘zbek</option>
+          </select>
+          <i class="fa-solid fa-circle-chevron-down"></i>
+        </div>
+      </div>
+    </nav>
+  </div>
+</header>
+
