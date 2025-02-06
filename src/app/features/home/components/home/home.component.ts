@@ -1,5 +1,7 @@
-import {AfterViewInit, Component, OnInit} from '@angular/core';
+import {AfterViewInit, Component, OnDestroy, OnInit} from '@angular/core';
 import {ScrollService} from "../../services/scroll.service";
+import {Subscription} from "rxjs";
+import {NavigationEnd, Router} from "@angular/router";
 
 
 @Component({
@@ -7,10 +9,20 @@ import {ScrollService} from "../../services/scroll.service";
   templateUrl: './home.component.html',
   styleUrl: './home.component.scss'
 })
-export class HomeComponent implements OnInit, AfterViewInit {
-  constructor(private scrollService: ScrollService) {}
+export class HomeComponent implements OnInit, AfterViewInit, OnDestroy {
+  private routerSubscription!: Subscription;
+
+  constructor(
+    private scrollService: ScrollService,
+    private router: Router) {}
 
   ngOnInit() {
+    this.routerSubscription = this.router.events.subscribe(event => {
+      if (event instanceof NavigationEnd) {
+        window.scrollTo({ top: 0, behavior: 'smooth' }); // Sahifani yuqoriga qaytarish
+      }
+    });
+
     this.scrollService.scrollToSection$.subscribe(sectionId => {
       if (sectionId) {
         this.scrollToSection(sectionId);
@@ -41,4 +53,10 @@ export class HomeComponent implements OnInit, AfterViewInit {
     { id: 5, name: 'Матрас Ультра', image: 'assets/mattresses/matras5.svg' },
     { id: 6, name: 'Матрас Экстра', image: 'assets/mattresses/matras6.svg' }
   ]
+
+  ngOnDestroy() {
+    if (this.routerSubscription) {
+      this.routerSubscription.unsubscribe();
+    }
+  }
 }
