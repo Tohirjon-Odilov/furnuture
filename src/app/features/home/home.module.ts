@@ -9,6 +9,10 @@ import {AngularYandexMapsModule, YaConfig} from "angular8-yandex-maps";
 import { SwiperComponentComponent } from './components/swiper-component/swiper-component.component';
 import {CarouselModule} from "ngx-owl-carousel-o";
 import {NzCarouselComponent, NzCarouselContentDirective} from "ng-zorro-antd/carousel";
+import { HeroComponent } from './components/hero/hero.component';
+import { AboutUsComponent } from './components/about-us/about-us.component';
+import { ReviewsComponent } from './components/reviews/reviews.component';
+import { PartnersComponent } from './components/partners/partners.component';
 
 const config: YaConfig = {
   apikey: 'daab0c1b-92f1-4749-a3e4-54c920ec0471',
@@ -20,6 +24,10 @@ const config: YaConfig = {
     ContactsComponent,
     MattressesComponent,
     SwiperComponentComponent,
+    HeroComponent,
+    AboutUsComponent,
+    ReviewsComponent,
+    PartnersComponent,
   ],
   imports: [
     CommonModule,

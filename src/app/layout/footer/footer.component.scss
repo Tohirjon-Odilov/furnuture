@@ -69,4 +69,65 @@
     font-family: Inter;
     padding-bottom: 30px;
   }
+
+
+  @media (max-width: 1024px) { // Planshet
+    .logo {
+      //flex-direction: column;
+      //align-items: flex-start;
+      //gap: 15px;
+    }
+
+    nav {
+      //gap: 15px;
+      //justify-content: center;
+    }
+  }
+
+  @media (max-width: 768px) { // Kichik planshet
+
+    padding: 15px 30px;
+
+    .logo{
+      margin-top: 10px;
+    }
+
+    nav {
+      flex-direction: column;
+      align-items: start;
+      text-align: center;
+
+      a {
+        font-size: 14px;
+      }
+    }
+
+    .line {
+      margin: 30px 0;
+    }
+
+    p {
+      text-align: center;
+    }
+  }
+
+  @media (max-width: 480px) { // Mobil versiya
+    .footer1 {
+      padding-top: 50px;
+    }
+
+
+    nav {
+      gap: 10px;
+      font-size: 12px;
+    }
+
+    .line {
+      margin: 20px 0;
+    }
+
+    p {
+      font-size: 12px;
+    }
+  }
 }
