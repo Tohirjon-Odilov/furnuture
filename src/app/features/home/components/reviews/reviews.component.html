@@ -1,0 +1,19 @@
+<section class="reviews" >
+  <div class="container">
+    <h2>Отзывы</h2>
+
+    <div class="reviews-grid">
+      <div class="review-card" *ngFor="let review of reviews">
+        <div class="review-text">
+          <p>{{ review.text }}</p>
+          <div class="triangle"></div>
+        </div>
+        <div class="customer-info">
+          <img [src]="review.image" [alt]="review.customerName">
+          <h3>{{ review.customerName }}</h3>
+        </div>
+      </div>
+    </div>
+  </div>
+
+</section>

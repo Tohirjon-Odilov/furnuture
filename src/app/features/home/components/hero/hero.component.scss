@@ -1,0 +1,124 @@
+$primary-color: #0d0d0d;
+$accent-color: #B59059;
+
+.hero {
+  text-align: center;
+  padding: 60px 20px;
+  //max-width: 1200px;
+  //margin: 0 auto;
+
+  .container{
+    position: relative;
+  }
+  background-color: #ffffff !important;
+  h1 {
+    font-size: 60px;
+    font-weight: 600;
+    line-height: 72px;
+    letter-spacing: -2%;
+    align-items: center;
+    //font-family: ;
+  }
+  span {
+    color: $primary-color;
+  }
+  p {
+    color: darken($primary-color, 30%);
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 30px;
+    align-items: center;
+    margin-top: 20px;
+  }
+
+  .absolute-section{
+    position: absolute;
+    top: 65px;
+    right: 1px;
+  }
+
+  .hero-image {
+    margin-top: 60px;
+    img {
+      max-width: 100%;
+      border-radius: 15px;
+    }
+  }
+
+
+  /* 📱 Media Queries */
+  @media (max-width: 1024px) { // Planshet
+    h1 {
+      font-size: 48px;
+      line-height: 60px;
+    }
+
+    p {
+      font-size: 18px;
+      line-height: 28px;
+    }
+
+    .absolute-section {
+      top: 40px;
+      right: 10px;
+      img {
+        width: 80%;
+      }
+    }
+  }
+
+  @media (max-width: 768px) { // Kichik planshet
+    padding: 20px 15px !important;
+    h1 {
+      font-size: 37px;
+      line-height: 40px;
+    }
+
+    p {
+      font-size: 16px;
+      line-height: 24px;
+    }
+
+    .absolute-section {
+      top: 30px;
+      right: 5px;
+      img {
+        width: 70%;
+      }
+    }
+
+    .hero-image {
+      margin-top: 40px;
+
+      //img{
+      // height: 300px;
+      //}
+    }
+  }
+
+  @media (max-width: 480px) { // Mobil versiya
+    padding: 40px 10px;
+
+    //h1 {
+    //  font-size: 32px;
+    //  line-height: 40px;
+    //}
+
+    p {
+      font-size: 14px;
+      line-height: 22px;
+    }
+
+    .absolute-section {
+      display: none; // Mobil versiyada yashirish
+    }
+
+    .hero-image {
+      margin-top: 30px;
+
+      img {
+        border-radius: 10px;
+      }
+    }
+  }
+}
