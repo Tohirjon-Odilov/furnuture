@@ -1,91 +1,6 @@
-<section class="hero">
-  <div class="container">
-    <h1>Лучший сон начинается с <br><span>Magneto Matras</span></h1>
-    <p>Наши матрасы обеспечивают идеальную поддержку позвоночника, <br> помогают расслабиться и восстановить силы после долгого дня</p>
-    <div class="absolute-section">
-      <img src="assets/Frame%20270.svg" alt="Magneto Matras">
-    </div>
-    <div class="hero-image">
-      <img src="assets/filmreal-studio-m-yE2MY4NG0-unsplash.svg" alt="Magneto Matras">
-    </div>
-  </div>
-</section>
+<app-hero></app-hero>
 
-<section class="about-us">
-  <div class="container">
-      <h2>О нас</h2>
-      <p class="about-us-info">
-        Ваш надежный партнер в мире комфорта и качественного сна! Мы специализируемся на производстве
-        и продаже высококачественных матрасов, разработанных с учетом самых современных технологий и стандартов.
-      </p>
-
-      <div class="info-wrapper">
-
-      </div>
-
-
-
-    <div class="container1">
-      <div class="top-cards">
-        <div class="right-card">
-          <div>
-            <img src="assets/about/kathyryn-tripp-6abl43xbcx8-unsplash.svg" alt="">
-          </div>
-          <div>
-            <div class="card card1">
-              <img src="assets/about/Vector11.svg" alt="vector image">
-              <h3>
-                Высокое качество
-              </h3>
-              <p>
-                Инновационные технологии и долговечные материалы
-              </p>
-            </div>
-          </div>
-        </div>
-        <div class="card card4">
-          <img src="assets/about/Vector.svg" alt="vector image">
-          <h3>
-            Комфорт и эргономика
-          </h3>
-          <p>
-            Анатомическая поддержка для лучшего сна
-          </p>
-        </div>
-      </div>
-
-      <div class="left-cards">
-        <div class="right-cards">
-          <div class="card">
-            <img src="assets/about/Frame.svg" alt="vector image">
-            <h3>
-              Гарантия на продукцию
-            </h3>
-            <p>Уверенность в надежности и долговечности</p>
-          </div>
-          <div class="card card3">
-            <img src="assets/about/Frame1.svg" alt="vector image">
-            <h3>
-              Доступные цены
-            </h3>
-            <p>
-              Оптимальное сочетание стоимости и качества
-            </p>
-          </div>
-          <div class="card card5">
-            <img src="assets/about/Frame3.svg" alt="vector image">
-            <h3>
-              Комфорт и эргономика
-            </h3>
-            <p>
-              Анатомическая поддержка для лучшего сна
-            </p>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
+<app-about-us id="about"></app-about-us>
 
 <section class="mattresses">
   <div class="container">
@@ -104,50 +19,7 @@
   </div>
 </section>
 
-<section class="reviews">
-  <div class="container">
-    <h2>Отзывы</h2>
+<app-reviews id="reviews"></app-reviews>
 
-    <div class="reviews-grid">
-      <div class="review-card" *ngFor="let review of reviews">
-        <!-- Sharh matni -->
-        <div class="review-text">
-          <p>{{ review.text }}</p>
-          <div class="triangle"></div>
-        </div>
+<app-partners id="partners"></app-partners>
 
-        <!-- Mijoz rasmi va ismi -->
-        <div class="customer-info">
-          <img [src]="review.image" [alt]="review.customerName">
-          <h3>{{ review.customerName }}</h3>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-
-
-<section class="partners">
-  <div class="container">
-    <h2>Партнеры</h2>
-
-    <div class="partners-grid">
-      <div class="partner-card" *ngFor="let partner of partners">
-        <img [src]="partner.logo" [alt]="partner.name">
-      </div>
-    </div>
-  </div>
-</section>
-
-
-
-<!--<section class="partners">-->
-<!--  <div class="container">-->
-<!--    <h2>Партнеры</h2>-->
-<!--    <div class="partner-list">-->
-<!--      <div class="partner" *ngFor="let partner of partners">-->
-<!--        {{ partner }}-->
-<!--      </div>-->
-<!--    </div>-->
-<!--  </div>-->
-<!--</section>-->

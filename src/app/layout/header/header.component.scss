@@ -27,9 +27,32 @@ body {
   }
 
 
-  .menu-toggle{
-    display: none;
+.menu-toggle {
+  display: none;
+  flex-direction: column;
+  gap: 5px;
+  background: none;
+  border: none;
+  cursor: pointer;
+
+  span {
+    display: block;
+    width: 25px;
+    height: 3px;
+    background: #fff;
+    transition: 0.3s;
   }
+
+  span.active:nth-child(1) {
+    transform: translateY(8px) rotate(45deg);
+  }
+  span.active:nth-child(2) {
+    opacity: 0;
+  }
+  span.active:nth-child(3) {
+    transform: translateY(-8px) rotate(-45deg);
+  }
+}
   //gap: 48px;
   .container {
     display: flex;
@@ -58,19 +81,15 @@ body {
 }
 
 .lang-select {
-    margin-left: 20px !important;
-
-  position: relative;
-  display: inline-block;
-
-  i {
-    position: absolute;
-    right: 16px;
-    top: 50%;
-    transform: translateY(-50%);
-    color: $accent-color;
-    //z-index: 1;
+  margin-left: 20px !important;
+  display: flex;
+  justify-content: center;
+  div{
+    position: relative;
+    width: 120px;
   }
+
+
 
   ::ng-deep select {
     -webkit-appearance: none;
@@ -97,85 +116,70 @@ body {
       color: white; /* Hoverda matn rangi */
     }
   }
+
+  i {
+    position: absolute;
+    right: 16px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: $accent-color;
+    //z-index: 1;
+  }
 }
 
-///* Mobile view */
-//@media (max-width: 768px) {
-//  .header {
-//    padding: 10px 0;
-//  }
-//
-//  .menu-toggle{
-//    display: block !important;
-//  }
-//
-//  .logo h3 {
-//    font-size: 18px;
-//    line-height: 22px;
-//  }
-//
-//  .nav {
-//    display: block;
-//    text-align: center;
-//
-//    ul {
-//      display: block;
-//      gap: 16px;
-//      margin-top: 10px;
-//    }
-//
-//    a {
-//      font-size: 14px;
-//      line-height: 20px;
-//    }
-//  }
-//
-//  .lang-select {
-//    margin-top: 10px;
-//    display: flex;
-//    justify-content: center;
-//    width: 100%;
-//
-//    i {
-//      right: unset;
-//      left: 10px;
-//    }
-//
-//    ::ng-deep select {
-//      width: 100%;
-//      padding: 10px;
-//      font-size: 14px;
-//    }
-//  }
-//}
-//
-///* Tablet view */
-//@media (max-width: 1024px) {
-//  .container {
-//    padding: 0 15px;
-//  }
-//
-//  .nav ul {
-//    gap: 20px;
-//  }
-//
-//  .nav a {
-//    font-size: 15px;
-//  }
-//
-//  .lang-select {
-//    margin-left: 15px;
-//  }
-//}
-//
-///* Large screens */
-//@media (min-width: 1200px) {
-//  .header {
-//    //padding: 16px 0;
-//  }
-//
-//  .nav ul {
-//    gap: 30px;
-//  }
-//}
+// Responsive Design
+@media (max-width: 1024px) {
+  .lang-select {
+    margin-left: 10px;
+  }
+
+  .nav ul {
+    gap: 16px;
+  }
+}
+
+@media (max-width: 768px) {
+  .menu-toggle {
+    display: flex !important;
+    z-index: 1111;
+  }
+
+  .nav {
+    flex-direction: column;
+    position: absolute;
+    top: 90px;
+    right: 0;
+    width: 100%;
+    height: 100vh;
+    background: rgba(15, 15, 15, 0.95);
+    display: none !important;  // <-- BU YERGA DISPLAY: NONE QO‘SHILDI
+    align-items: center;
+
+    padding: 20px 0;
+    z-index: 999;
+  }
+
+  .nav.open {
+    display: block !important;  // <-- BU YERGA DISPLAY: FLEX QO‘SHILDI
+    justify-content: center !important;
+  }
+
+  .nav ul {
+    flex-direction: column;
+    gap: 16px;
+    width: 100%;
+    text-align: center;
+  }
+
+  .lang-select {
+    //display: flex;
+    //justify-content: center;
+    margin-left: 0 !important;
+    margin-top: 15px;
+    align-items: center !important;
+  }
+}
+
+
+
 
