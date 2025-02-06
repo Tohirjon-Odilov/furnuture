@@ -50,12 +50,12 @@
 
     <nav class="nav" [class.open]="isMenuOpen">
       <ul>
-        <li><a routerLink="/" routerLinkActive="active">Главная</a></li>
+        <li><a routerLink="/" routerLinkActive="active" (click)="toggleMenu()">Главная</a></li>
         <li><a (click)="navigateTo('about')">О нас</a></li>
         <li><a (click)="navigateTo('reviews')">Отзывы</a></li>
         <li><a (click)="navigateTo('partners')">Партнеры</a></li>
-        <li><a routerLink="/mattresses" routerLinkActive="active">Матрасы</a></li>
-        <li><a routerLink="/contacts" routerLinkActive="active">Контакты</a></li>
+        <li><a routerLink="/mattresses" routerLinkActive="active" (click)="toggleMenu()">Матрасы</a></li>
+        <li><a routerLink="/contacts" routerLinkActive="active" (click)="toggleMenu()">Контакты</a></li>
       </ul>
 
       <div class="lang-select">

@@ -9,11 +9,8 @@ import {ScrollService} from "../../services/scroll.service";
 })
 export class HomeComponent implements OnInit, AfterViewInit {
   constructor(private scrollService: ScrollService) {}
-  array = [1, 2, 3, 4];
-  effect = 'scrollx';
 
   ngOnInit() {
-    // ScrollService orqali kelgan signalni kuzatish
     this.scrollService.scrollToSection$.subscribe(sectionId => {
       if (sectionId) {
         this.scrollToSection(sectionId);
@@ -22,8 +19,6 @@ export class HomeComponent implements OnInit, AfterViewInit {
   }
 
   ngAfterViewInit() {
-    // Home sahifasi to'liq yuklangach, scroll qilish
-    // (Agar scroll signal oldindan yuborilgan bo'lsa)
     this.scrollService.scrollToSection$.subscribe(sectionId => {
       if (sectionId) {
         this.scrollToSection(sectionId);
@@ -46,10 +41,4 @@ export class HomeComponent implements OnInit, AfterViewInit {
     { id: 5, name: 'Матрас Ультра', image: 'assets/mattresses/matras5.svg' },
     { id: 6, name: 'Матрас Экстра', image: 'assets/mattresses/matras6.svg' }
   ]
-
-
-
-
-
-
 }
