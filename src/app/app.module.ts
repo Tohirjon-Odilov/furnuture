@@ -15,7 +15,8 @@ import { ErrorPagesModule } from './features/error-pages/error-pages.module';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import {AngularYandexMapsModule, YaConfig} from "angular8-yandex-maps";
 
-import {register} from 'swiper/element/bundle'
+import {register} from 'swiper/element/bundle';
+import { MattressDetailComponent } from './features/home/components/mattress-detail/mattress-detail.component'
 
 register();
 
@@ -31,7 +32,8 @@ const config: YaConfig = {
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    MattressDetailComponent
   ],
   imports: [
     BrowserAnimationsModule,

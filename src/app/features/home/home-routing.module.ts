@@ -3,6 +3,7 @@ import { RouterModule, Routes } from '@angular/router';
 import { HomeComponent } from './components/home/home.component';
 import {ContactsComponent} from "./components/contacts/contacts.component";
 import {MattressesComponent} from "./components/mattresses/mattresses.component";
+import {MattressDetailComponent} from "./components/mattress-detail/mattress-detail.component";
 
 const routes: Routes = [
   {
@@ -18,7 +19,10 @@ const routes: Routes = [
     path: 'mattresses',
     component: MattressesComponent,
   },
-
+  {
+    path: 'mattresses/:id',
+    component: MattressDetailComponent,
+  },
   {
     path: '**',
     redirectTo: '',

@@ -1,0 +1,69 @@
+<!--<div class="container">-->
+<!--  <div class="mattress-detail-container">-->
+<!--    <div class="mattress-left">-->
+<!--      <h2 class="model-title">MODEL A2Turk MATRAS</h2>-->
+<!--      <div class="image-wrapper">-->
+<!--        <img src="assets/Image.svg" alt="MODEL S6" class="mattress-image" />-->
+<!--        <div class="image-label">MODEL S6</div>-->
+<!--      </div>-->
+<!--    </div>-->
+
+<!--    <div class="mattress-right">-->
+<!--      <div class="feature-card">-->
+<!--        <i class="icon">🌀</i>-->
+<!--        <span>Пружинный блок «Bonnel» высокой плотности</span>-->
+<!--      </div>-->
+<!--      <div class="feature-card">-->
+<!--        <i class="icon">🛏️</i>-->
+<!--        <span>Высококачественный ковер, толщина 0.5 см, 2 слоя</span>-->
+<!--      </div>-->
+<!--      <div class="feature-card">-->
+<!--        <i class="icon">➰</i>-->
+<!--        <span>Z-образные пружины с интервалом 25 см с каждой стороны</span>-->
+<!--      </div>-->
+<!--      <div class="feature-card">-->
+<!--        <i class="icon">🧵</i>-->
+<!--        <span>Хлопковая ткань толщиной 1 см</span>-->
+<!--      </div>-->
+
+<!--      <button class="contact-button">Связаться с нами ↗</button>-->
+<!--    </div>-->
+<!--  </div>-->
+<!--</div>-->
+<div class="container">
+  <main class="main-content">
+    <section class="product-section">
+      <h1 class="product-title">MODEL A2Turk MATRAS</h1>
+
+      <div class="product-body">
+        <div class="product-image"></div>
+
+        <div class="product-features">
+          <div
+            class="feature-card"
+            *ngFor="let feature of featureData"
+          >
+            <div class="feature-icon-wrapper">
+              <div class="feature-icon" [ngStyle]="{
+              'background-image': feature.isBackgroundImage ? 'url(' + feature.icon + ')' : 'none'
+            }">
+                <img
+                  *ngIf="!feature.isBackgroundImage"
+                  [src]="feature.icon"
+                  alt="icon"
+                />
+              </div>
+            </div>
+            <p class="feature-description">{{ feature.description }}</p>
+          </div>
+
+          <button class="contact-button">
+            Связаться с нами
+            <img src="assets/icons/frame-5.svg" alt="arrow" />
+          </button>
+        </div>
+      </div>
+    </section>
+
+  </main>
+</div>

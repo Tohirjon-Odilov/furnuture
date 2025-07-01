@@ -12,7 +12,11 @@
     </div>
 
     <div class="mattress-grid">
-      <div class="mattress-card" *ngFor="let mattress of filteredMattresses">
+      <div class="mattress-card"
+           *ngFor="let mattress of filteredMattresses"
+           [routerLink]="['/mattresses', mattress.id]"
+           style="cursor: pointer;"
+      >
         <img [src]="mattress.image" [alt]="mattress.name">
         <h3>{{ mattress.name }}</h3>
       </div>
