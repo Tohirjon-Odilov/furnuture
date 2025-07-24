@@ -14,6 +14,8 @@ export class HeaderComponent {
 
   navigateTo(section: string) {
     // Home sahifasiga o'tish
+    this.isMenuOpen = false;
+
     this.router.navigate(['/']).then(() => {
       // Sahifa o'zgargach, scroll qilishni kechiktiramiz
       if (section){
@@ -22,6 +24,10 @@ export class HeaderComponent {
         }, 300); // 300 millisekund kutish
       }
     });
+  }
+
+  closeMenu() {
+    this.isMenuOpen = false;
   }
 
 
